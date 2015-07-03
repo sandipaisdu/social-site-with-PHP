@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+<?php
+include("functions/functions.php");
+
+?>
+
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -67,40 +74,46 @@
                     <div class="col-md-5">
                         <div class="sign_up">
                             <form action="" method="post">
-                            <button class="btn btn-info">Sign Up</button>
-                                <input type="text" name="fname" id="fname" placeholder="First name" class="form-control" required="required">
-                                <input type="text" name="fname" id="fname" placeholder="Last name" class="form-control" required="required">
-                                <input type="email" name="email" id="email" placeholder="Email Address" class="form-control" required="required">
-                                <input type="password" name="pass1" id="pass1" placeholder="New Password" class="form-control" required="required">
-                                <input type="password" name="pass2" id="pass2" placeholder="Password Again" class="form-control" required="required">
+                            <h2 class="text-center">Please Sign Up Here for Free</h2>
+                                <input type="text" name="name" id="fname" placeholder="Full name" class="form-control" required="required">
+
+                               <input type="email" name="email" id="email" placeholder="Email Address" class="form-control" required="required">
+
+                                <input type="password" name="pass" id="pass1" placeholder="New Password" class="form-control" required="required">
+
                                 <select name="country" id="country" class="" required="required">
-                                    <option value="">Select Your Country</option>
-                                    <option value="Bangladesh">Bangladesh</option>
-                                    <option value="India">India</option>
-                                    <option value="Pakistan">Pakistan</option>
-                                    <option value="Nepal">Nepal</option>
-                                    <option value="Bhutan">Bhutan</option>
-                                    <option value="Bhutan">Bhutan</option>
-                                    <option value="SriLanka">SriLanka</option>
+                                    <option>Select Your Country</option>
+                                    <option>Bangladesh</option>
+                                    <option>India</option>
+                                    <option>Pakistan</option>
+                                    <option>Nepal</option>
+                                    <option>Bhutan</option>
+                                    <option>Bhutan</option>
+                                    <option>SriLanka</option>
                                 </select>
+
                                 <select name="sex" id="sex" class="sex" required="required">
                                     <option value="">SEX</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="others">Others</option>
                                 </select>
+
                                 <div class="dateofbirth">
+
                                     <p>Date of Birth:</p>
-                                <input id="dob" name="dob" type="date" class="dob form-control" placeholder="Date of Birth" required="required">
-                                </div>
+
+                                    <input id="dob" name="dob" type="date" class="dob form-control" placeholder="Date of Birth" required="required">                         </div>
+
                                 <br>
 
-                                <button class="btn btn-primary sign_up_button" type="submit">Sign Up for PINIKBUZZ</button>
+                                <button class="btn btn-primary sign_up_button" type="submit" name="sign_up">Sign Up for PINIKBUZZ</button>
 
 
 
 
                             </form>
+                            <?php InsertUser();?>
                         </div>
                     </div>
                 </div>
